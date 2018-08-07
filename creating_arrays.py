@@ -52,3 +52,13 @@ x = np.linspace(0, 2*pi, 100)
 f = np.sin(x)
 # plt.plot(f)
 # plt.show()
+
+array1 = np.arange(0, 10, .5)
+print('Before using the "reshape" method of ndarray objects:')
+print(array1)
+array1.reshape(2, 10)  # as we will see, that method doesn't change the object
+print('After using the "reshape" method of ndarray objects:')
+print(array1)
+array2 = np.reshape(array1, (4, 5))  # creates a new object
+print('After using the "reshape" numpy function:')
+print(array2)
