@@ -8,10 +8,11 @@ import numpy as np
 # a = np.array(1, 2, 3, 4)  # wrong!
 a = np.array([1, 2, 3, 4])  # right!
 
-b = np.array([(1.5, 2, 3), (4, 5, 6)])
+b = np.array([[1.5, 2, 3], [4, 5, 6]])
 
 # the type of the array can also be explicitly specified at creation time
-c = np.array([[1, 2], [3, 4]], dtype=complex)
+c = np.array([[1.5, 2, 3], [4, 5, 6]], dtype=np.int32)
+d = np.array([[1, 2], [3, 4]], dtype=np.complex128)
 
 
 # Often, the elements of an array are originally unknown, but its size is
@@ -21,11 +22,15 @@ c = np.array([[1, 2], [3, 4]], dtype=complex)
 
 zeros = np.zeros((3, 4), dtype=np.int16)
 ones = np.ones((3, 4), dtype=np.int16)
-random1 = np.empty((6, 6), dtype=np.int16)
-random2 = np.empty((2, 9), dtype=np.float32)
+unknown1 = np.empty((6, 6), dtype=np.int16)
+unknown2 = np.empty((2, 9), dtype=np.float32)
+random1 = np.random.random_integers(0, 100, 5)  # dtype = int32
+random2 = np.random.random(5)  # dtype = float64
 
 print(zeros)
 print(ones)
+print(unknown1)
+print(unknown2)
 print(random1)
 print(random2)
 
@@ -46,10 +51,10 @@ seq2 = np.linspace(0, 2, 9,  dtype=np.float32)
 print(seq2)
 
 # np.linspace is very  useful to evaluate function at lots of points
-from numpy import pi
-import matplotlib.pyplot as plt
-x = np.linspace(0, 2*pi, 100)
-f = np.sin(x)
+# from numpy import pi
+# import matplotlib.pyplot as plt
+# x = np.linspace(0, 2*pi, 100)
+# f = np.sin(x)
 # plt.plot(f)
 # plt.show()
 
