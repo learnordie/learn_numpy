@@ -75,3 +75,32 @@ print("a[::-1] =", c6, "(reversed array)")
 # ====================================== #
 
 # Multidimensional arrays can have one index per axis.
+
+nrows, ncols = b.shape
+
+print()
+print(b)
+print()
+print("# of rows =", nrows)
+print("# of columns =", ncols)
+
+
+row1 = b[0, :]
+row2 = b[1, :]
+row3 = b[2, :]
+
+column1 = b[:, 0]
+column2 = b[:, 1]
+column3 = b[:, 2]
+column4 = b[:, 3]
+
+print()
+print("row1 =", row1)
+print("row2 =", row2)
+print("row3 =", row3)
+
+print()
+print("column1 =", column1)
+print("column2 =", column2)
+print("column3 =", column3)
+print("column4 =", column4)

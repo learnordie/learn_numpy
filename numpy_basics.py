@@ -10,10 +10,22 @@ a = np.array([[0,  1,  2,  3,  4],
               [10, 11, 12, 13, 14]])
 
 print(a)
-print("dimensions =", a.ndim)  # number of axes
-print("shape =", a.shape)  # dimensions (size of the array in each dimension)
+print()
+
+# number of axes
+print("dimensions =", a.ndim)
+
+# size of the array in each dimension
+nrows, ncols = a.shape
+print("# of rows =", nrows)
+print("# of columns =", ncols)
+print("shape =", a.shape)
+
 # total number of elements of the array
 print("array size =", a.size, "elements")
-print("data type =", a.dtype.name)  # name of the elements' data type
+
+# data type name of the elements of the array
+print("data type =", a.dtype.name)
+
 # size in bytes of each element of the array
 print("item size =", a.itemsize, "bytes")
