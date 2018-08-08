@@ -1,3 +1,3 @@
 # learn_numpy
 
-Learn hor to use numpy
+Learn how to use numpy
