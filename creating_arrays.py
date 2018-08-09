@@ -24,7 +24,7 @@ zeros = np.zeros((3, 4), dtype=np.int16)
 ones = np.ones((3, 4), dtype=np.int16)
 unknown1 = np.empty((6, 6), dtype=np.int16)
 unknown2 = np.empty((2, 9), dtype=np.float32)
-random1 = np.random.random_integers(0, 100, 5)  # dtype = int32
+random1 = np.random.randint(0, 100, 5)  # dtype = int32
 random2 = np.random.random(5)  # dtype = float64
 
 print(zeros)

@@ -5,7 +5,7 @@
 
 import numpy as np
 
-a = np.random.random_integers(0, 100, 15).reshape(5, 3)
+a = np.random.randint(0, 100, 15).reshape(5, 3)
 
 print(a)
 
