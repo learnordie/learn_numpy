@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-""" Arrays copies: same objects or new objects """
+""" Arrays copies: same objects or new ones? """
 
 import numpy as np
 
@@ -21,8 +21,12 @@ print("memory address of 'b' =", id(b))
 
 # So if I change something in b, it also changes in a
 b[0, 0] = 999
-print("Does a change in 'b' affect 'a'?", a[0, 0] == 999)
+print("Does a change in 'b' affects 'a'?", a[0, 0] == 999)
 print("a[0,0] =", a[0, 0])
+
+# And a change in the shape of b changes the shape of a
+b.shape = 1, 12
+print("Does a change in the shape of 'b' affects 'a'?", a.shape == b.shape)
 
 
 # ============================================================= #
@@ -42,13 +46,12 @@ print("memory address of 'b' =", id(b))
 
 # A change in b doesn't change a at all
 b[0, 0] = 999
-print("Does a change in 'b' affect 'a'?", a[0, 0] == 999)
+print("Does a change in 'b' affects 'a'?", a[0, 0] == 999)
 print("a[0,0] =", a[0, 0])
 
 # But changing the shape of b doesn't change the shape of a
 b.shape = 1, 12
-print(b)
-print(a)
+print("Does a change in the shape of 'b' affects 'a'?", a.shape == b.shape)
 
 
 # ====================================================== #
@@ -69,10 +72,9 @@ print("memory address of 'b' =", id(b))
 
 # But, surprisingly, a change something in b changes a as well...
 b[0, 0] = 999
-print("Does a change in 'b' affect 'a'?", a[0, 0] == 999)
+print("Does a change in 'b' affects 'a'?", a[0, 0] == 999)
 print("a[0,0] =", a[0, 0])
 
 # But changing the shape of b doesn't change the shape of a
 b.shape = 1, 12
-print(b)
-print(a)
+print("Does a change in the shape of 'b' affects 'a'?", a.shape == b.shape)
